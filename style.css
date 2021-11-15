@@ -1,0 +1,195 @@
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  background-color: #fafafa;
+  line-height: 100px;
+  font-size: 15px;
+  z-index: 1000;
+}
+
+
+
+#pic {
+  /* width: 100%;
+  max-height: 200px;
+  padding-bottom: 50px; */
+
+  /* display: grid;
+  height: 100%; */
+
+  position: relative;
+  height: 800px;
+  min-height: 500px;
+  width: 100%;
+  background: #161415 url(./images/intro.jpg) no-repeat top center;
+  background-size: cover !important;
+  -webkit-background-size: cover !important;
+  text-align: center;
+  overflow: hidden;
+}
+
+#pic .title {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 auto;
+  width: 85%;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+#pic:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+#pic .title h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #fafafa;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#pic .title h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #fafafa;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#profile {
+  font-family: "Karla", sans-serif;
+  font-size: 20;
+  margin: 115px 400px;
+}
+
+#profile h2 {
+  font-size: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+#profile p {
+  margin: 10;
+}
+
+#profile ul {
+  margin: 5;
+}
+
+.right {
+  text-align: right;
+}
+
+.columnTitle {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* following css pertains to body*/
+body {
+  /*grey background*/
+  background-color: #d3ccc4;
+  /* top and bottom margins are 50px, left and right are 0px */
+  margin: 50px 0px;
+}
+
+/* following css pertains to paragraphs*/
+/* p {
+  font-family: 'Montserrat', sans-serif;
+} */
+
+/* following css pertains to header 1*/
+h1 {
+  /*set font*/
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* following css pertains to header 2*/
+h2 {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+b {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* following css pertains to unordered lists */
+#header ul {
+  /* removes bullets */
+  list-style-type: none;
+  /* white background colour */
+  /* background-color:  #fafafa; */
+  /* list stays regardless of scrolling */
+  position: fixed;
+  /* list is at the top of page */
+  top: 0;
+  /* width is 100% of screen */
+  width: 100%;
+  /* no margin */
+  margin: 0;
+  /* no padding */
+  padding: 0;
+  /* slight grey shadow */
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+}
+
+/*following css pertains to items in a list*/
+#header li {
+  /*align to the left*/
+  float: left;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*following css pertains to links in a list*/
+#header li a {
+  font-family: "Montserrat", sans-serif;
+  /*make the links blocks*/
+  /* display: block; */
+  /*make the text black*/
+  color: black;
+  /*make the links centered*/
+  text-align: center;
+  /*box extends 14px above and below text and 16px the left and right of text*/
+  padding: 14px 16px;
+  /*remove default decoration (underline)*/
+  text-decoration: none;
+  /*set font*/
+}
+
+/*following css pertains to inactive links in a list and dropdowm menus when cursor hovers over*/
+li a:hover.inactive,
+.dropdown:hover .dropButton {
+  /*make background colour darker grey*/
+  color: grey;
+}
+
+/*following css pertains to active links in a list */
+.active {
+  /*make background colour green*/
+  color: rgba(119, 119, 119, 0.548);
+}
