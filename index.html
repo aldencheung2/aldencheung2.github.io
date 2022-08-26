@@ -1,7 +1,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Home</title>
+	<title>Alden Cheung</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,191 +12,269 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400&display=swap" rel="stylesheet">
     
     <link href="./fonts/css/all.css" rel="stylesheet">
-
-	<script src="//code.jquery.com/jquery-1.10.2.js">
-	</script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 </head>
 
-<div id="header">
-    <div id="Name">
-        Alden Cheung
+
+<body>
+    <script>
+        function scrollToId(id){
+            console.log("test")
+            document.getElementById(id).scrollIntoView({behavior:"smooth"});
+        }
+    </script>
+
+    <div id="header" class="d-none d-md-block">    
+        <a style="color: rgb(166, 166, 166)" id="homeButton" href="#" onclick="scrollToId('pic'); return false;">Home</a>
+        <a style="color: #fafafa;" id="aboutButton" href="#" onclick="scrollToId('profile'); return false;">About</a>
+        <a style="color: #fafafa;" id="resumeButton" href="#" onclick="scrollToId('resume'); return false;">Résumé</a>
+        <a style="color: #fafafa;" id="projectsButton" href="index.html">Projects</a>
+        <!-- <a style="color: #fafafa;" id="activitiesButton" href="index.html">Activities</a> -->
+        <a style="color: #fafafa;" id="activitiesButton" href="index.html">Contact</a>
+        <a style="color: #fafafa;" href="https://aldencheung2.github.io/blog/">Blog</a>
     </div>
-    <ul>
-        <li style="float:right"><a class="active" href="index.html">Home</a></li>
-        <li style="float:right"><a class="inactive" href="https://aldencheung2.github.io/blog/">Blog</a></li>
-        
-    </ul>
-</div>
 
-
-<div id = "pic">
-    <div class = "Title">
-        <h1>Alden Cheung</h1>
-        <h2>Computer Science Student</h2>
-        <div id = "links">
-            <ul id = "linksList">
-                <li>
-                    <a href=https://github.com/aldencheung2 target="_blank">
-                        <!-- https://fontawesome.com/v5.15/how-to-use/on-the-web/referencing-icons/basic-use -->
-                        <i class="fab fa-github" style="font-size: 3em; color: White;"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:aldenc@umich.edu">
-                        <i class="fas fa-envelope" style="font-size: 3em; color: White;"></i>
-                    </a>
-                </li>
-                <!-- <li><a href="mailto:aldenc@umich.edu"><img src="./images/email.png" width="35" height="35"></a></li> -->
-            </ul>
-        </div>
-    </div>
-</div>
-<div id = "profile">
-    <h2>
-        Profile
-    </h2>
-    <div class="columnTitle"><b>Education</b></div>
-    <div class = "row">
-        <div class = "column">
-            <p><b>University of Michigan</b></p>
-            <p><i>Computer Science, B.S.E.</i></p>
-            
-        </div>
-        <div class = "column">
-            <div class = "right">
-                <p>Sep. 2020 - Apr. 2024</p>
-                <p>Ann Arbor, Michigan</p>
-            </div>
-            
-        </div>
-        
-    </div>
-    <p>3.965 GPA</p>
-    <p>Relevant Coursework:
-        <ul>
-            <li>Discrete Math</li>
-            <li>Introduction to Data Structures</li>
-            <li>Computer Science Pragmatics</li>
-        </ul>
-    </p>
-    <p>Awards and Honors
-        <ul>
-            <li>William J. Branstrom Freshman Prize (Top 5%)</li>
-            <li>University Honors</li>
-        </ul>
-    </p>
-
-    <br>
-    <br>
-
-    <div class="columnTitle"><b>Skills</b></div>
-    <div class = "row">
-        <div class = "column">
-            <p><b>Languages</b></p>
-            <ul>
-                <li>Experienced in C++, Python, JavaScript, HTML, and CSS</li>
-                <li>Familiar with Java, C#, and Lua</li>
-            </ul>
-
-            <p><b>Technologies/Frameworks</b></p>
-            <ul>
-                <li>Git, Visual Studio, VS Code, Valgrind, GDB</li>
-                <li>RESTful APIs, Selenium</li>
-            </ul>
-            
-        </div>
-       
-        
-    </div>
     
 
-    <br>
-    <br>
-    <div class="columnTitle"><b>Experience</b></div>
-    <div class = "row">
-        <div class = "column">
-            <p><b>University of Michigan</b></p>
-            <p><i>EECS 203 (Discrete Math) Grader</i></p>
-            
-        </div>
-        <div class = "column">
-            <div class = "right">
-                <p>Sep. 2021 - Present</p>
-                <p>Ann Arbor, Michigan</p>
+
+    <div id = "pic">
+        <div class = "Title">
+            <h1>Alden Cheung</h1>
+            <h2>Computer Science Student</h2>
+            <div id = "links">
+                <a href=https://github.com/aldencheung2 target="_blank">
+                    <i class="fab fa-github" style="font-size: 3em;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aldencheung2/" target="_blank">
+                    <i class="fab fa-linkedin" style="font-size: 3em;"></i>
+                </a>
+                <a href="mailto:aldenc@umich.edu">
+                    <i class="fas fa-envelope" style="font-size: 3em;"></i>
+                </a>
             </div>
             
         </div>
-        
-    </div>
-    <p>
-        <ul>
-            <li>Graded homework assignments in a timely manner</li>
-            <li>Provided corrections and feedback to students</li>
-        </ul>
-    </p>
-    <div class = "row">
-        <div class = "column">
-            <p><b>Math Senior Scholar</b></p>
-            <p><i>Tutor</i></p>
-            
+        <div id = "scrollDown">
+            <a href="#" onclick="scrollToId('profile'); return false;">
+                <i class="fas fa-chevron-down" style="font-size: 1.5em;"></i>
+            </a>
         </div>
-        <div class = "column">
-            <div class = "right">
-                <p>Sep. 2019 - June 2020</p>
-                <p>Ontario, Canada</p>
+    </div>
+    <div id = "profile">
+        <div id = "profileText">
+            <h1>
+                A bit about me.
+            </h1>
+            <p>
+                Hey! I'm Alden and I'm a software developer with a passion for ____________. I'm
+                currently a third year student at the University of Michigan pursuing a
+                bachelor's degree in computer science with
+                a minor in statistics. I aspire toward a career that will allow me to
+                channel my creativity through crafting beautiful software and engaging experiences.
+                When I'm not coding, I enjoy watching Formula 1, following college football (Go
+                Blue!), and doing archery.
+            </p>
+            <div class = "row">
+                <div class = "col-xs-12 col-md-6">
+                    <h2 class="header2">
+                        Status
+                    </h2>
+                    <p>
+                        I'm currently looking for a full-time software engineering internship for the
+                        summer of 2023. If you think I'm a good fit, please contact me at
+                        <a class="highlight" href="mailto:aldenc@umich.edu">aldenc@umich.edu</a>.
+                    </p>
+                    <a href="files/resume.pdf" target="_blank" class="btn btn-primary">Download my résumé!</a>
+
+                </div>
+                <div class = "col-xs-12 col-md-6">
+                    <h2 class="header2">
+                        Some technologies I've worked with:
+                    </h2>
+                    <p>
+                        <img src="./images/techIcons/python.png" title="Python"/>
+                        <img src="./images/techIcons/cpp.png" title="C++"/>
+                        <img src="./images/techIcons/javascript.png" title="JavaScript"/>
+                        <img src="./images/techIcons/html5.png" title="HTML5"/>
+                        <img src="./images/techIcons/css3.png" title="CSS3"/>
+                        <img src="./images/techIcons/java.png" title="Java"/>
+                        <img src="./images/techIcons/kotlin.png" title="Kotlin"/>
+                        <img src="./images/techIcons/swift.png" title="Swift"/>
+                        <img src="./images/techIcons/typescript.png" title="TypeScript"/>
+                        <img src="./images/techIcons/reactNative.png" title="React Native"/>
+                        <img src="./images/techIcons/nestjs.png" title="NestJS"/>
+                        <img src="./images/techIcons/jquery.png" title="jQuery"/>
+                        <img src="./images/techIcons/github.png" title="GitHub"/>
+                        <img src="./images/techIcons/postman.png" title="Postman"/>
+                        <img src="./images/techIcons/linux.png" title="Linux"/>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id = "resume">
+        <div id = "resumeText">
+            <h1>
+                My credentials.
+            </h1>
+            <h2 class="header2centered">Background Education</h2>
+            <div class = "row">
+                <div class = "col-6 col-md-3 text-md-end align-middle">
+                        <b>Bachelor's Degree</b>
+                        <p>Sep. 2020 - Apr. 2024</p>
+                </div>
+                <!-- Mobile Image -->
+                <div class="col-6 d-flex d-md-none justify-content-end">
+                    <img id="rounded" src="./images/experience/umich.png" height="70" width="70">
+                </div>
+                <!-- Desktop Image -->
+                <div class="col-2 d-none d-md-flex justify-content-center">
+                    <img id="rounded" src="./images/experience/umich.png" height="100" width="100">
+                </div>
+                <div class = "col-md-7">
+                    <b class="highlight">University of Michigan</b>
+                    
+                    <p>Ann Arbor, Michigan</p> 
+                    <p>I'm a junior majoring in computer science with a minor in statistics and have a 3.944
+                    GPA. I'm currently taking courses in Web Systems, Databases, and Computer Organization. In the past, I've taken Data Structures
+                    and Algorithms, Discrete Math, and Theory of Computation. Awards recieved include university honors,
+                    the dean's list, the William J. Branstrom
+                    Freshman Prize (awarded to the top 5% of Freshmen), and Angell Scholar
+                    designation (no grade below an A-).
+                    </p>
+                </div>    
             </div>
             
-        </div>
-        
-    </div>
-    <p>
-        <ul>
-            <li>Organized meetings for 20+ students on a weekly basis</li>
-            <li>Provided practice problems, clarified concepts, and helped with homework</li>
-        </ul>
-    </p>
-
-    <div class = "row">
-        <div class = "column">
-            <p><b>The Mississauga News</b></p>
-            <p><i>Newspaper Carrier</i></p>
-            
-        </div>
-        <div class = "column">
-            <div class = "right">
-                <p>Sep. 2014 - Aug 2015</p>
-                <p>Ontario, Canada</p>
+            <h2 class="header2centered">Experience</h2>
+            <div class = "row">
+                <div class = "col-6 col-md-3 text-md-end align-middle">
+                    <b>Full Stack Software Engineer Intern</b>
+                    <p>May 2022 - Aug. 2022</p>
+                </div>
+                <!-- Mobile Image -->
+                <div class="col-6 d-flex d-md-none justify-content-end">
+                    <img id="rounded" src="./images/experience/ncr.png" height="70" width="70">
+                </div>
+                <!-- Desktop Image -->
+                <div class="col-2 d-none d-md-flex justify-content-center">
+                    <img id="rounded" src="./images/experience/ncr.png" height="100" width="100">
+                </div>
+                <div class = "col-md-7">
+                    <b class="highlight">NCR Corporation</b>
+                    
+                    <p>Atlanta, Georgia</p> 
+                    <p>I'm a junior majoring in computer science with a minor in statistics and have a 3.944
+                    GPA. I'm currently taking courses in Web Systems, Databases, and Computer Organization. In the past, I've taken Data Structures
+                    and Algorithms, Discrete Math, and Theory of Computation. Awards recieved include university honors,
+                    the dean's list, the William J. Branstrom
+                    Freshman Prize (awarded to the top 5% of Freshmen), and Angell Scholar
+                    designation (no grade below an A-).
+                    </p>
+                </div>  
             </div>
-            
+
+            <div class = "row">
+                <div class = "col-6 col-md-3 text-md-end align-middle">
+                    <b>Discrete Math Grader</b>
+                    <p>Aug. 2021 - May 2022</p>
+                </div>
+                <!-- Mobile Image -->
+                <div class="col-6 d-flex d-md-none justify-content-end">
+                    <img id="rounded" src="./images/experience/umich.png" height="70" width="70">
+                </div>
+                <!-- Desktop Image -->
+                <div class="col-2 d-none d-md-flex justify-content-center">
+                    <img id="rounded" src="./images/experience/umich.png" height="100" width="100">
+                </div>
+                <div class = "col-md-7">
+                    <b class="highlight">University of Michigan</b>
+                    
+                    <p>Ann Arbor, Michigan</p> 
+                    <p>I'm a junior majoring in computer science with a minor in statistics and have a 3.944
+                    GPA. I'm currently taking courses in Web Systems, Databases, and Computer Organization. In the past, I've taken Data Structures
+                    and Algorithms, Discrete Math, and Theory of Computation. Awards recieved include university honors,
+                    the dean's list, the William J. Branstrom
+                    Freshman Prize (awarded to the top 5% of Freshmen), and Angell Scholar
+                    designation (no grade below an A-).
+                    </p>
+                </div>    
+            </div>
         </div>
-        
     </div>
-    <p>
-        <ul>
-            <li>Prepared and assembled around 60 newspapers and delivered them regardless of weather</li>
-            <li>Kept track of cancelled, new, and vacationing subscribers</li>
-        </ul>
-    </p>
 
-    <br>
-    <br>
 
-    <div class="columnTitle"><b>Projects</b></div>
-    <div class = "row">
-        <div class = "column">
-            <p><b>Atlas Extension</b></p>
-            <p><i>HTML, JavaScript, CSS</i></p>
-            <ul>
-                <li>Developed a chrome extension that adds professor ratings and past syllabi to university course pages</li>
-                <li>Retrieved data using asynchronous web scraping</li>
-            </ul>
-            <p><b>Bestbuy Checkout Bot</b></p>
-            <p><i>Python</i></p>
-            <ul>
-                <li>Developed a checkout bot and stock tracker using selenium</li>
-                <li>Automatically purchases item when it restocks and notifies user via email</li>
-            </ul>
+
+    <div id = "projects">
+        <div id = "projectDetails">
+            <h1>Some of my personal projects.</h1>
+            <div class = "row">
+
+            </div>
+    </div>
+
+    <div id = "contact">
+        <div id = "contactText">
+            <h1>Test</h1>
         </div>
-        
+    </div>
 
-</div>
+    <script>
+        //Scrollmagic
+        $(function() {
+            var controller = new ScrollMagic.Controller();
+            
+            // Opacity of header
+            var headerTween = new TweenMax.to('#header', 0.5, {
+                backgroundColor: 'black'
+            });
+
+            var opacityScene = new ScrollMagic.Scene({
+                triggerElement: '#profile',
+                // Place trigger for opacity change 1% above the bottom of the screen
+                triggerHook: 0.99
+            })
+            .setTween(headerTween)
+            .addIndicators()
+            .addTo(controller);
+
+            //Coloring of buttons
+            var aboutTween = new TimelineLite().to('#aboutButton', 0.5, {
+                color: '#F06000'
+            }).to('#homeButton', 0.5, {
+                color: '#fafafa'
+            }, 0);
+
+            var opacityScene = new ScrollMagic.Scene({
+                triggerElement: '#profile',
+                // Place trigger for opacity change 1% above the bottom of the screen
+                triggerHook: 0.01
+            })
+            .setTween(aboutTween)
+            .addIndicators()
+            .addTo(controller);
+
+            var resumeTween = new TimelineLite().to('#resumeButton', 0.5, {
+                color: '#F06000'
+            }).to('#aboutButton', 0.5, {
+                color: '#fafafa'
+            }, 0);
+
+            var opacityScene = new ScrollMagic.Scene({
+                triggerElement: '#resume',
+                // Place trigger for opacity change 1% above the bottom of the screen
+                triggerHook: 0.01
+            })
+            .setTween(resumeTween)
+            .addIndicators()
+            .addTo(controller);
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>

@@ -1,3 +1,5 @@
+/* Navigation Header */
+
 #header {
   position: fixed;
   top: 0;
@@ -7,38 +9,45 @@
   text-transform: uppercase;
   text-align: center;
   width: 100%;
-  background-color: #fafafa;
-  line-height: 100px;
+  /* background-color: #fafafa; */
+  /* background-color: black; */
+  background-color: rgba(0, 0, 0, 0);
+  line-height: 65px;
   font-size: 15px;
   z-index: 1000;
 }
 
+#header a {
+  font-family: "Montserrat", sans-serif;
+  margin: 10;
+  text-decoration: none;
+  color: #fafafa;
+}
 
+#header a:hover {
+  color: rgb(166, 166, 166)
+}
+
+/* Home Section */
 
 #pic {
-  /* width: 100%;
-  max-height: 200px;
-  padding-bottom: 50px; */
-
-  /* display: grid;
-  height: 100%; */
-
-  position: relative;
-  height: 800px;
-  min-height: 500px;
+  height: 100vh;
+  min-height: 300px;
   width: 100%;
   background: #161415 url(./images/intro.jpg) no-repeat top center;
   background-size: cover !important;
   -webkit-background-size: cover !important;
   text-align: center;
-  overflow: hidden;
 }
 
 #pic .title {
+  position: absolute;
+  top: max(50%, 250px);
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: inline-block;
   vertical-align: middle;
   margin: 0 auto;
-  width: 85%;
   padding-bottom: 30px;
   text-align: center;
 }
@@ -66,22 +75,77 @@
   text-align: center;
 }
 
+#links a {
+  margin: 10;
+  text-decoration: none;
+}
+
+#scrollDown {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+}
+
+/* About Section */
+
 #profile {
-  font-family: "Karla", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 20;
-  margin: 115px 400px;
-}
-
-#profile h2 {
-  font-size: 50px;
-}
-
-.row {
+  background-color: #222222;
   display: flex;
+  justify-content: center;
 }
 
-.column {
-  flex: 50%;
+#profileText {
+  display: inline-block;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  max-width: 1000px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#profileText h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  font-size: 38px;
+}
+
+#profileText h2 {
+  color: #F06000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#profileText p {
+  font-family: "Montserrat", sans-serif;
+  color: #888888;
+  justify-content: center;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+#profileText a:hover{
+  color: #0eabb0c7
+}
+
+#profileText img {
+  filter: url(filters.svg#grayscale);
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  height: auto;
+  width: 12%;
+  margin: 3% 3%;
+  -moz-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out
+
+}
+#profileText img:hover {
+  filter: none;
+  -webkit-filter: none;
 }
 
 #profile p {
@@ -92,104 +156,172 @@
   margin: 5;
 }
 
-.right {
-  text-align: right;
-}
+/* Resume Section */
 
-.columnTitle {
+#resume {
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-size: 20;
+  background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
-/* following css pertains to body*/
+#resumeText {
+  display: inline-block;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  max-width: 1000px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#resumeText h1{
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  text-align: center;
+  font-size: 38px;
+}
+
+#resumeText h2 {
+  color: #F06000;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#resumeText p {
+  font-family: "Montserrat", sans-serif;
+  color: #888888;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+#rounded {
+  border-radius: 50%;
+}
+
+
+/* Projects Section */
+
+#projects {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20;
+  background-color: #ebeeee;
+  /* background-color: #d3ccc4; */
+  display: flex;
+  justify-content: center;
+}
+
+#projectDetails {
+  display: inline-block;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  max-width: 1000px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#projectDetails h1 {
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  text-align: center;
+  font-size: 38px;
+}
+
+/* Contact Section */
+
+#contact {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20;
+  background-color: #0f0f0f;
+  display: flex;
+  justify-content: center;
+}
+
+#contactText {
+  display: inline-block;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  max-width: 1000px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#contactText h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  justify-content: center;
+  text-align: center;
+  font-size: 38px;
+}
+
+/* General Styling */
+
 body {
-  /*grey background*/
-  background-color: #d3ccc4;
-  /* top and bottom margins are 50px, left and right are 0px */
-  margin: 50px 0px;
-}
-
-/* following css pertains to paragraphs*/
-/* p {
-  font-family: 'Montserrat', sans-serif;
-} */
-
-/* following css pertains to header 1*/
-h1 {
-  /*set font*/
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-/* following css pertains to header 2*/
-h2 {
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  margin: 0px 0px;
 }
 
 b {
   font-family: "Montserrat", sans-serif;
 }
 
-/* following css pertains to unordered lists */
-#header ul {
-  /* removes bullets */
-  list-style-type: none;
-  /* white background colour */
-  /* background-color:  #fafafa; */
-  /* list stays regardless of scrolling */
-  position: fixed;
-  /* list is at the top of page */
-  top: 0;
-  /* width is 100% of screen */
-  width: 100%;
-  /* no margin */
-  margin: 0;
-  /* no padding */
-  padding: 0;
-  /* slight grey shadow */
-  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
-}
-
-/*following css pertains to items in a list*/
-#header li {
-  /*align to the left*/
-  float: left;
-  font-family: "Montserrat", sans-serif;
-}
-
-/*following css pertains to links in a list*/
-#header li a {
-  font-family: "Montserrat", sans-serif;
-  /*make the links blocks*/
-  /* display: block; */
-  /*make the text black*/
-  color: black;
-  /*make the links centered*/
-  text-align: center;
-  /*box extends 14px above and below text and 16px the left and right of text*/
-  padding: 14px 16px;
-  /*remove default decoration (underline)*/
+a {
   text-decoration: none;
-  /*set font*/
 }
 
-/*following css pertains to inactive links in a list and dropdowm menus when cursor hovers over*/
-li a:hover.inactive,
-.dropdown:hover .dropButton {
-  /*make background colour darker grey*/
-  color: grey;
+a:hover {
+  color:rgb(166, 166, 166);
 }
 
-/*following css pertains to active links in a list */
-.active {
-  /*make background colour green*/
-  color: rgba(119, 119, 119, 0.548);
+i {
+  color: white;
+}
+
+i:hover {
+  color:rgb(166, 166, 166);
+}
+
+.highlight {
+  color: #11abb0
+}
+
+.btn-primary {
+  margin-top: 20;
+  margin-bottom: 20;
+  background-color: #11abb0 !important;
+  border-color: #11abb0 !important;
+}
+
+.btn-primary:hover {
+  background-color: #0eabb0c7 !important;
+  border-color: #0eabb0c7 !important;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.header2 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 23;
+  text-transform: uppercase;
+  padding-top: 10;
+}
+
+.header2centered {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2em;
+  font-size: 23;
+  text-transform: uppercase;
+  padding-top: 10;
+  text-align: center;
+}
+
+::selection {
+  background: #fed136;
+}
+::-moz-selection {
+  background: #fed136; /* Gecko Browsers */
 }
