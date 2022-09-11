@@ -228,6 +228,29 @@
   font-size: 38px;
 }
 
+.projectWrapper {
+  position: relative;
+  height: 200px;
+  width: 257px;
+}
+
+.projectText {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(29, 106, 154, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  /* transition: opacity .2s, visibility .2s; */
+}
+
+.projectWrapper:hover .projectText {
+  visibility: visible;
+  opacity: 1;
+}
 /* Contact Section */
 
 #contact {

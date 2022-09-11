@@ -1,3 +1,5 @@
+<!-- TODO: add bootstrap tool tips to language icons -->
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
@@ -14,13 +16,12 @@
     <link href="./fonts/css/all.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 </head>
-
 
 <body>
     <script>
@@ -34,9 +35,8 @@
         <a style="color: rgb(166, 166, 166)" id="homeButton" href="#" onclick="scrollToId('pic'); return false;">Home</a>
         <a style="color: #fafafa;" id="aboutButton" href="#" onclick="scrollToId('profile'); return false;">About</a>
         <a style="color: #fafafa;" id="resumeButton" href="#" onclick="scrollToId('resume'); return false;">Résumé</a>
-        <a style="color: #fafafa;" id="projectsButton" href="index.html">Projects</a>
-        <!-- <a style="color: #fafafa;" id="activitiesButton" href="index.html">Activities</a> -->
-        <a style="color: #fafafa;" id="activitiesButton" href="index.html">Contact</a>
+        <!-- <a style="color: #fafafa;" id="projectsButton" href="index.html">Projects</a>
+        <a style="color: #fafafa;" id="activitiesButton" href="index.html">Contact</a> -->
         <a style="color: #fafafa;" href="https://aldencheung2.github.io/blog/">Blog</a>
     </div>
 
@@ -98,7 +98,8 @@
                         Some technologies I've worked with:
                     </h2>
                     <p>
-                        <img src="./images/techIcons/python.png" title="Python"/>
+                        <img src="./images/techIcons/python.png" title="Python"
+                        data-bs-toggle="tooltip"/>
                         <img src="./images/techIcons/cpp.png" title="C++"/>
                         <img src="./images/techIcons/javascript.png" title="JavaScript"/>
                         <img src="./images/techIcons/html5.png" title="HTML5"/>
@@ -170,12 +171,14 @@
                     <b class="highlight">NCR Corporation</b>
                     
                     <p>Atlanta, Georgia</p> 
-                    <p>I'm a junior majoring in computer science with a minor in statistics and have a 3.944
-                    GPA. I'm currently taking courses in Web Systems, Databases, and Computer Organization. In the past, I've taken Data Structures
-                    and Algorithms, Discrete Math, and Theory of Computation. Awards recieved include university honors,
-                    the dean's list, the William J. Branstrom
-                    Freshman Prize (awarded to the top 5% of Freshmen), and Angell Scholar
-                    designation (no grade below an A-).
+                    <p>As an intern, I added features to an existing Android and iOS mobile banking app with 20M+
+                        users using Java, Kotlin, Objective-C, and Swift. The features I developed
+                        included integrating a screen sharing SDK and adding a deep link to the Android
+                        app's crypto trading page to streamline the user experience.
+                        I also worked on a React Native banking app that was in the early stages of
+                        development by creating a new notifications page, creating a new payee details page, and unit testing my contributions using Jest.
+                        Lastly, I implemented multiple new endpoints for the React Native app's Backend-for-Frontend API using TypeScript and NestJS.
+                        
                     </p>
                 </div>  
             </div>
@@ -197,12 +200,9 @@
                     <b class="highlight">University of Michigan</b>
                     
                     <p>Ann Arbor, Michigan</p> 
-                    <p>I'm a junior majoring in computer science with a minor in statistics and have a 3.944
-                    GPA. I'm currently taking courses in Web Systems, Databases, and Computer Organization. In the past, I've taken Data Structures
-                    and Algorithms, Discrete Math, and Theory of Computation. Awards recieved include university honors,
-                    the dean's list, the William J. Branstrom
-                    Freshman Prize (awarded to the top 5% of Freshmen), and Angell Scholar
-                    designation (no grade below an A-).
+                    <p>As a grader, I marked weekly homework assignments for a 900-person class in an efficient and timely manner.
+                    I also provided corrections and clear feedback to strengthen understanding and
+                    improve exam performance.
                     </p>
                 </div>    
             </div>
@@ -210,16 +210,28 @@
     </div>
 
 
-
-    <div id = "projects">
+    <!-- TODO: remove 'display: none;'' -->
+    <div id = "projects" style="display: none;">
         <div id = "projectDetails">
             <h1>Some of my personal projects.</h1>
             <div class = "row">
-
+                <div class = "col-sm-12 col-md-4">
+                    <div class = "projectWrapper">
+                        <img class = "projectImage" src="./images/projects/atlas.svg">
+                        <p class = "projectText">Atlas Extension</p>
+                    </div>
+                </div>
+                <div class = "col-sm-12 col-md-4">
+                    Test
+                </div>
+                <div class = "col-sm-12 col-md-4">
+                    Test
+                </div>
             </div>
+        </div>
     </div>
-
-    <div id = "contact">
+    <!-- TODO: remove 'display: none;'' -->
+    <div id = "contact" style="display: none;">
         <div id = "contactText">
             <h1>Test</h1>
         </div>
@@ -241,7 +253,6 @@
                 triggerHook: 0.99
             })
             .setTween(headerTween)
-            .addIndicators()
             .addTo(controller);
 
             //Coloring of buttons
@@ -257,7 +268,6 @@
                 triggerHook: 0.01
             })
             .setTween(aboutTween)
-            .addIndicators()
             .addTo(controller);
 
             var resumeTween = new TimelineLite().to('#resumeButton', 0.5, {
@@ -272,7 +282,6 @@
                 triggerHook: 0.01
             })
             .setTween(resumeTween)
-            .addIndicators()
             .addTo(controller);
         });
     </script>
